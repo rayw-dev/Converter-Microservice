@@ -1,0 +1,30 @@
+{
+  "name": "converter-microservice",
+  "version": "1.0.0",
+  "description": "Proof of concept unit converter using node js and data storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "ping"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayw-dev/Converter-Microservice.git"
+  },
+  "keywords": [
+    "Unit",
+    "Converter"
+  ],
+  "author": "Ray Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rayw-dev/Converter-Microservice/issues"
+  },
+  "homepage": "https://github.com/rayw-dev/Converter-Microservice#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.4"
+  }
+}
