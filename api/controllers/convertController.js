@@ -1,15 +1,20 @@
 'use strict';
-const converters = require('../models/converterModel.js');
+const repository = require('../models/conversionsRepository.js');
 
 exports.convert = function (req, res) {
-    var tempConverter = converters.GenerateTemperatureConverter();
-    var converted = tempConverter.Convert(req.body.Value, req.body.FromUnit, req.body.ToUnit);
+    var converter = repository.getConverter(req.body.ConvertType);
 
+    if(!converter) {
+        res.status(404).send('Not Found');
+        return;
+    }
+
+    var converted = converter.Convert(req.body.Value, req.body.FromUnit, req.body.ToUnit);
     var result = {
         FromUnit: req.body.FromUnit,
         FromValue: req.body.Value,
         ToUnit: req.body.ToUnit,
         ToValue: converted
     };
-    res.json(result);
-}
+    res.status(200).json(result);
+};
