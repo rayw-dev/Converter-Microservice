@@ -4,7 +4,7 @@
   "description": "Proof of concept unit converter using node js and data storage",
   "main": "index.js",
   "scripts": {
-    "test": "ping"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "mathjs": "^5.4.0",
+    "mocha": "^5.2.0",
     "mongoose": "^5.3.4",
     "util": "^0.11.1"
   }

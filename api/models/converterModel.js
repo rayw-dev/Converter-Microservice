@@ -87,7 +87,7 @@ module.exports = {
                 //convert To Required
                 var conversionToRequired = this.Units.find(c => c.Name === toUnit);
                 if (!conversionToRequired) return null;
-                valueInRequiredUnit = math.eval(util.format(conversionToRequired.ConvertTo, value));
+                valueInRequiredUnit = math.eval(util.format(conversionToRequired.ConvertTo, valueInBaseUnit));
             }
 
             return valueInRequiredUnit;
